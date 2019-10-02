@@ -1,16 +1,19 @@
-# Kubernetes Template Project
+# Kubernetes Discussion Theme Project
 
-The Kubernetes Template Project is a template for starting new projects in the GitHub organizations owned by Kubernetes. All Kubernetes projects, at minimum, must have the following files:
+The Kubernetes Discourse Component used to build the [Kubernetes Discuss](https://discuss.kubernetes.io) theme.
 
-- a `README.md` outlining the project goals, sponsoring sig, and community contact information
-- an `OWNERS` with the project leads listed as approvers ([docs on `OWNERS` files][owners])
-- a `CONTRIBUTING.md` outlining how to contribute to the project
-- an unmodified copy of `code-of-conduct.md` from this repo, which outlines community behavior and the consequences of breaking the code
-- a `LICENSE` which must be Apache 2.0 for code projects, or [Creative Commons 4.0] for documentation repositories, without any custom content
-- a `SECURITY_CONTACTS` with the contact points for the Product Security Team 
-  to reach out to for triaging and handling of incoming issues. They must agree to abide by the
-  [Embargo Policy](https://git.k8s.io/security/private-distributors-list.md#embargo-policy)
-  and will be removed and replaced if they violate that agreement.
+## Install
+
+On a fresh installation of [Discourse](https://www.discourse.org/) navigate to the Admin panel.
+
+* Under `Customize` -> `Themes` select the `Components` tab.
+* Select "Install" then the `From a git repository` tab.
+* Enter the full HTTPS address for the Repository, ie: `https://github.com/kubernetes-sigs/discuss-theme`
+* Select "Install"
+* Under the previous `Themes` page, select the `Themes` tab.
+* Select the currently installed theme (typically named "Default")
+* At the bottom, remove any previous "Theme Components"
+* In the Theme Components drop down select "Kubernetes Discourse Theme" and press "Add"
 
 ## Community, discussion, contribution, and support
 
