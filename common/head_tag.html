@@ -1,0 +1,57 @@
+<script type="text/discourse-plugin" version="0.1">
+  api.decorateWidget("header-buttons:before", helper => {
+      const menu = [];
+      const menuItems = [
+        "Documentation|https://kubernetes.io/docs",
+        "Blog|https://kubernetes.io/blog",
+        "Partners|https://kubernetes.io/partners",
+        "Community|https://kubernetes.io/community",
+        "Case Studies|https://kubernetes.io/case-studies"
+      ];
+
+      menuItems.forEach((item) => {
+          const menuItem = item.split("|");
+          menu.push(helper.h("li.hidden-for-mobile",
+	  helper.h("a.nav-link", {
+	    href: menuItem[1],
+	    text: menuItem[0]
+	  })
+      ));
+    });
+    return helper.h("div.header-links",
+      helper.h("ul#nav-link-container", menu));
+  });
+
+  api.registerConnectorClass('below-site-header', 'kubernetes-header', {
+        setupComponent(args, component) {
+	        const router = api.container.lookup('router:main');
+            router.on('willTransition', () => {
+                component.set('displayBanner', false);
+            });
+            api.onPageChange((url, title) => {
+                if (url == "/") {
+                    $('html').addClass('banner-visible');
+	                component.set("displayBanner", true);
+                }
+                else {
+                    //$('html').removeClass('banner-visible');
+                    $('html').addClass('banner-visible');
+	                component.set("displayBanner", true);
+                }
+	        });
+        }
+    });
+
+</script>
+
+<script type='text/x-handlebars' data-template-name='/connectors/below-site-header/kubernetes-header'>
+    {{#if displayBanner}}
+    <div class="banner-outer">
+        <div class="banner">
+          <div class="banner-content">
+              <h1>Community Forums</h1>
+          </div>
+        </div>
+    </div>
+    {{/if}}
+</script>

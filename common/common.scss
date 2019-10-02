@@ -1,0 +1,381 @@
+// Button Styles
+button {
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 0 20px;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+// Header Menu
+#nav-link-container {
+    display: inline;
+
+    li {
+        display: inline-block;
+        float: left;
+    }
+
+    a {
+        color: $header_primary;
+        padding: 23px 13px;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+@media screen and (max-width: 765px) {
+    #nav-link-container {
+        display: none;
+    }
+}
+
+// Footer Styles
+@media screen and (min-width: 1025px) {
+    footer {
+        width: 100%;
+        background-image: url(https://kubernetes.io/images/texture.png);
+        background-color: #303030;
+
+        main {
+            max-width: 1000px;
+        }
+
+        nav {
+            overflow: hidden;
+            margin-bottom: 20px;
+            a {
+                width: 16.65% !important;
+                float: left;
+                font-size: 24px;
+                font-weight: 300;
+                white-space: nowrap;
+            }
+        }
+
+        .social {
+            padding: 0 30px;
+            max-width: 1200px;
+
+            a:hover {
+                background-color: #fff;
+            }
+
+            div {
+                float: left;
+            }
+
+            div:last-child {
+                float: right;
+            }
+
+            a {
+                display: inline-block;
+                background-image: url(https://kubernetes.io/images/social_sprite.png);
+                background-repeat: no-repeat;
+                background-size: auto;
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                margin-right: 10px;
+                span {
+                    position: absolute;
+                    display: block;
+                    height: 0;
+                    overflow: hidden;
+                }
+            }
+
+            a.twitter {
+                background-position: 0 0;
+            }
+
+            a.github {
+                background-position: -150px 0;
+            }
+
+            a.slack {
+                background-position: -100px 0;
+            }
+
+            a.stack-overflow {
+                background-position: -50px 0;
+            }
+
+            a.mailing-list {
+                background-position: -200px 0;
+            }
+
+            a.calendar {
+                background-position: -250px 0;
+            }
+
+            a.button {
+                background-image: none;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 750px){
+    footer {
+        main {
+            nav {
+                text-align: center;
+                a {
+                    width: 30%;
+                    padding: 0 12px;
+                }
+            }
+        }
+
+        .social {
+            text-align: center;
+
+            div {
+                display: inline-block;
+            }
+
+            div:last-child {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+}
+
+footer {
+    main {
+        width: 100%;
+        background-image: url(https://kubernetes.io/images/texture.png);
+        background-color: #303030;
+    }
+
+    .footer-message{
+        background-color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: #fff;
+    }
+
+    .button {
+        display: inline-block!important;
+        border-radius: 6px!important;
+        padding: 0 20px;
+        line-height: 40px;
+        color: #fff;
+        background-color: #3371e3!important;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .button:hover {
+        background-color: #fff!important;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 24px;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 20px 0;
+        position: relative;
+        margin: auto;
+    }
+
+    .social {
+        margin: 20px 0;
+
+         div {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        a.button:hover {
+            color: #3371e3;
+        }
+
+        a {
+            display: inline-block;
+            background-image: url(https://kubernetes.io/images/social_sprite.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-right: 10px;
+
+             span {
+                position: absolute;
+                display: block;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+
+        a.button {
+            background-image: none;
+            width: auto;
+            height: auto;
+        }
+
+        a.button:hover {
+            color: #3371e3;
+        }
+
+        a.twitter {
+            background-position: 0 0;
+        }
+
+        a.twitter:hover {
+            background-position: 0 100%;
+        }
+
+        a.github {
+            background-position: -150px 0;
+        }
+
+        a.github:hover {
+            background-position: -150px 100%;
+        }
+
+        a.slack {
+            background-position: -100px 0;
+        }
+
+        a.slack:hover {
+            background-position: -100px 100%;
+        }
+
+        a.stack-overflow {
+            background-position: -50px 0;
+        }
+
+        a.stack-overflow:hover {
+            background-position: -50px 100%;
+        }
+
+        a.mailing-list {
+            background-position: -200px 0;
+        }
+
+        a.mailing-list:hover {
+            background-position: -200px 100%;
+        }
+
+        a.calendar:hover {
+            background-position: -250px 100%;
+        }
+
+        .social a.button {
+            background-image: none;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    *, .button {
+        box-sizing: border-box;
+        font-family: "Roboto",sans-serif;
+        background: none;
+        margin: 0;
+        border: 0;
+    }
+
+    #miceType {
+        clear: both;
+        font-size: 11px;
+        line-height: 18px;
+        color: #aaa;
+    }
+
+    .light-text {
+        color: #fff;
+    }
+
+    .center {
+        text-align: center;
+    }
+}
+
+// Site Header
+.banner {
+    margin: 0 auto 0 auto;
+	position: relative;
+	padding-bottom: 25px;
+	text-align: center;
+	width: 1110px;
+
+    background-image: url($k-wheel);
+    background-repeat: no-repeat;
+    height: 146px;
+    background-size: 309px;
+    background-position: 82% 0%;
+    top: inherit;
+
+    .banner-content{
+        text-align: left;
+        color: #fff;
+
+        p {
+            width: 59%;
+            font-size: 14px;
+            font-weight: 100;
+        }
+
+        h1 {
+            margin: 0 0 4px 0;
+            font-weight: 100;
+            font-size: 43px;
+        }
+    }
+
+    @media screen and (max-width: 770px) {
+        .banner-content {
+            padding: 7% 0 0 1%;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        background-size: 190px;
+        background-position: 96% 169%;
+
+        .banner-content {
+            padding: 7% 0 0 1%;
+
+            h1 {
+                font-size: 29px;
+            }
+
+            p {
+                width: 95%;
+            }
+        }
+    }
+}
+
+.banner-outer {
+    background-image: radial-gradient(circle, #2d66da, #002668);
+    margin: 0 auto 0 auto;
+    position: relative;
+    padding-bottom: 24px;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 192px;
+    top: 45px;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Kubernetes Discuss Theme",
+  "component": true,
+  "license_url": "https://github.com/kubernetes-sigs/discuss-theme/blob/master/LICENSE",
+  "about_url": "https://github.com/kubernetes-sigs/discuss-theme",
+  "authors": null,
+  "theme_version": 1.0,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "k-wheel": "assets/k-wheel.png"
+  },
+  "color_schemes": {
+    "Kubernetes Default": {
+      "primary": "222222",
+      "secondary": "ffffff",
+      "tertiary": "3371e3",
+      "quaternary": "e45735",
+      "header_background": "ffffff",
+      "header_primary": "333333",
+      "highlight": "00c0d1",
+      "danger": "e45735",
+      "success": "009900",
+      "love": "fa6c8d"
+    }
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
